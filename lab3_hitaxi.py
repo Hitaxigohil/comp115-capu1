@@ -160,24 +160,36 @@ alex.backward()
 '''
 
 # Code your exe 2 here
-num_semicircles=7
-rainbow_colors=["violet", "indigo", "blue",
+num_circles=7
+rainbow_colors = ["violet", "indigo", "blue",
                    "green", "yellow", "orange", "red"]
-radius=80
-radius_increase=20
+radius = 100
+radius_increase=10
 alex.clear()
 alex.speed(5)
-alex.pensize(10)
-alex.up()
+alex.pensize(5)
+
 for rainbow_color in rainbow_colors:
     alex.color(rainbow_color)
-    alex.goto(0, -radius)     # move to bottom center
-    alex.setheading(180)      # face left
-    alex.down()
-    alex.circle(radius, 180)  # draw semi-circle
     alex.up()
+    alex.goto(radius, 0) 
+    alex.setheading(90) 
+    alex.down()
+    alex.circle(radius, 180)
     radius = radius + radius_increase
+
 alex.shape("blank")
+    
+
+
+
+
+
+
+
+    
+
+
 
 
 
